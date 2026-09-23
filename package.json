@@ -1,0 +1,40 @@
+{
+  "name": "edms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js",
+    "build:backend": "cmd /C \"rd /s /q build 2>nul & mkdir build & copy package.json build\\ && copy package-lock.json build\\ && copy index.js build\\ && xcopy backend\\* build\\backend\\ /E /Y /I\"",
+    "install:backend": "cmd /C \"cd build && npm ci --omit=dev\"",
+    "build:frontend": "npm run build --prefix frontend",
+    "fullbuild": "npm run build:backend && npm run install:backend && npm run build:frontend",
+    "build": "npm run build:backend && npm run build:frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "class-transformer": "^0.5.1",
+    "console-stamp": "^3.1.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "ldapts": "^7.4.0",
+    "luxon": "^3.5.0",
+    "morgan": "^1.10.0",
+    "mssql": "^11.0.1",
+    "multer": "^1.4.5-lts.1",
+    "vcards-js": "^2.10.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

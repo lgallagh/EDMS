@@ -1,0 +1,51 @@
+class NPData {
+  constructor() {
+    this.id = null;
+    this.speciality = null;
+    this.provider_type = null;
+    this.doctor_first_name = null;
+    this.doctor_middle_name = null;
+    this.doctor_last_name = null;
+    this.doctor_credential = null;
+    this.gender = null;
+    this.biography = null;
+    this.biography_spanish = null;
+    this.right_column_text = null;
+    this.phone = null;
+    this.email = null;
+    this.image_file = null;
+    this.vanity_url = null;
+    this.healthgrades_url = null;
+    this.seo_title = null;
+    this.seo_description = null;
+    this.seo_keywords = null;
+    this.doctor_short_name = null;
+    this.CAQHID = null;
+    this.NPI = null;
+    this.doctor_youtube_channel_url = null;
+    this.doctor_facebook_url = null;
+    this.doctor_twitter_url = null;
+    this.doctor_instagram_url = null;
+    this.doctor_google_url = null;
+    this.doctor_linkedin_url = null;
+    this.review_code_top = null;
+    this.review_code_bottom = null;
+    this.extended_shot_hours = null;
+    this.widget_code = null;
+    this.yext_schema_code = null;
+    this.zocdoc_widget = null;
+    this.is_active = null;
+    this.appointment_status = null;
+    this.is_submit_to_nextgen_active = null;
+    this.created = null;
+    this.modified = null;
+    this.is_callcenter_active = null;
+    this.is_virtual_visit = null;
+    this.virtual_visit_url = null;
+    this.doctor_obtain_src = null;
+    this.service_alternate_text = null;
+    this.doctor_maiden_name = null;
+  }
+}
+
+module.exports = NPData;

@@ -1,0 +1,29 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && (if exist ..\\build\\frontend (rmdir /s /q ..\\build\\frontend) ELSE (echo Creating /build/frontend)) && xcopy .\\dist\\* ..\\build\\frontend\\* /e /y",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tinymce/tinymce-react": "^5.1.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "axios": "^1.7.9",
+    "dateformat": "^5.0.3",
+    "devextreme": "^24.1.8",
+    "devextreme-react": "^24.1.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-input-mask": "^2.0.4",
+    "react-router-dom": "^7.1.1"
+  },
+  "devDependencies": {
+    "vite": "^6.0.6"
+  }
+}

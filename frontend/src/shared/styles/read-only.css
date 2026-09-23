@@ -1,0 +1,60 @@
+/* Disable interactions for all form elements inside read-only-mode */
+.read-only-mode input,
+.read-only-mode textarea,
+.read-only-mode select,
+.read-only-mode button,
+.read-only-mode .dx-button,
+.read-only-mode .dx-textbox,
+.read-only-mode .dx-checkbox,
+.read-only-mode .dx-radiobutton,
+.read-only-mode .clickable-icon,
+.read-only-mode i,
+.read-only-mode .dx-icon, 
+.read-only-mode .pending-active,
+.read-only-mode .import-button{
+    pointer-events: none;
+    cursor: default !important;
+    opacity: 0.6; /* Grey out */
+}
+
+.read-only-mode input[type="file"] {
+    display: none !important;
+}
+
+
+/* Allow exceptions inside .editable */
+.read-only-mode .editable input,
+.read-only-mode .editable textarea,
+.read-only-mode .editable select,
+.read-only-mode .editable button,
+.read-only-mode .editable .dx-button,
+.read-only-mode .editable .dx-textbox,
+.read-only-mode .editable .clickable-icon,
+.read-only-mode .editable i,
+.read-only-mode .editable .dx-icon {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    opacity: 1 !important;
+}
+.read-only-mode .tox-edit-area__iframe {
+    pointer-events: none;
+    opacity: 0.6; /* Optional */
+  }
+
+/* Enable buttons that contain "Cancel" */
+.read-only-mode .dx-button[aria-label="Cancel"],
+.read-only-mode [role="button"][aria-label="Cancel"]
+.read-only-mode button[aria-label="Cancel"] {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    cursor: pointer !important;
+}
+
+
+
+/* Enable edit icons */
+.read-only-mode i.fa.fa-edit {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    cursor: pointer !important;
+}

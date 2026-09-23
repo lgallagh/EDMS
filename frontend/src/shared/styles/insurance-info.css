@@ -1,0 +1,31 @@
+    .dx-button.clone, .dx-button.remove {
+        padding: 0%;
+        width: 22px;
+        height: 22px;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        vertical-align: middle;
+        margin-left: 11px;
+    }
+    .dx-button.clone, .dx-button.clone:active  {
+        background-color: #3D444E;
+    }
+    .dx-button.clone:hover {
+        background-color: #343A42;
+    }
+    
+    .dx-button.remove, .dx-button.remove:active {
+        background-color: #B70518;
+    }
+    .dx-button.remove:hover {
+        background-color: #9C0414;
+    }
+
+    .dx-button.clone .dx-button-content, .dx-button.remove .dx-button-content {
+        padding: 0;
+        padding-block: 0;
+        -webkit-padding-start: 0;
+    }
+
+

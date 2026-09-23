@@ -1,0 +1,45 @@
+Deployment Instructions:
+
+1) Make sure you are using the correct version of Node/npm. This application is currently using: v22.12.0 of Node and 10.9.0 of npm.
+2) In frontend/.env, make sure that 
+    VITE_REACT_APP_BASE_URL is set to the location the application will be running under. This controls where API calls will go. (E.g.: "http://domain_name/edms")
+    VITE_REACT_APP_STATIC_PATH is set to the path needed for static content. This will be used for finding static content like images and fonts. (E.g.: "/edms/frontend")
+    VITE_REACT_APP_BASENAME is set to the root path the app will be running under. This will control the "basename" used with React Router, so that page navigation matches the path the application is deployed under. (E.g.: "/edms")
+
+    Based on the current QA deployment, those values would be (adjust the domain as needed for other environments):
+        VITE_REACT_APP_BASE_URL="http://enta-miscq01.entandallergy.com/edms"
+        VITE_REACT_APP_STATIC_PATH="/edms/frontend"
+        VITE_REACT_APP_BASENAME="/edms"
+3) In frontend/vite.config.js, make sure that "base" is uncommented, and set with the path the application will be running under in IIS
+    Based on the current deployment configuration being used in IIS, that should be:
+        base: '/edms/frontend'
+4) If you have not already done so at least once, in the frontend directory run: npm update --legacy-peer-deps
+5) Go to the root directory in PowerShell
+6) Run one of the following:
+    npm run build
+    OR
+    npm run fullbuild
+
+    'build' will generate the application without installing all the dependencies, while fullbuild will do a production install, which includes populating node_modules. This will result in a larger package size.
+7) Move the contents of the 'build' folder to the place the application should run from.
+8) If you did not do a 'fullbuild', run "npm ci --omit=dev" from this directory to install dependencies
+9) Make sure there is an appropriate .env file in this directory
+10) Make sure that all file paths pointed to in the .env file exist and the user this is running under has permissions on them
+11) Run the application
+
+For Running in Development:
+
+The back end and the front end are separate applications. In development, we want to be able to make changes to the front end without having to run a build script every time a change is made, so they are both run separately. In accord to accomodate that, make sure of the following:
+
+First:
+1) In the root .env file, make note of APP_PORT.
+2) In the frontend/vite.config.js, make note of the port and host values.
+
+Once you have those set to the values you want to use:
+3) In the root.env file, make sure that ORIGIN points to the host and port specified in frontend/vite.config.js.
+4) In frontend/.env, make sure that VITE_REACT_APP_BASE_URL is pointing to the host and port (APP_PORT) that the back end is running under. VITE_REACT_APP_STATIC_PATH and VITE_REACT_APP_BASENAME should be empty strings unless you are testing something related to routing.
+
+By pointing the applications at each other, the front end is able to make API calls, and the back end won't reject them due to CORS issues.
+
+With those files configured, open two different terminals. One should be in the project root directory, where you should run: npm start
+The other should be in the /frontend directory, where you should run: npm run dev

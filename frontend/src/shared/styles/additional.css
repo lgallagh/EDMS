@@ -1,0 +1,604 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+#content {
+    float: left;
+    padding: 25px 0px;
+    background: #B7C5C8;
+    width: 100%;
+}
+
+#header {
+    overflow: hidden;
+    padding: 20px 0;
+    background: #d7e7eb;
+}
+
+.cont_heading_add i.fa {
+    color: #fff;
+}
+
+.cont_heading_add i.fa:hover {
+    color: #eee;
+}
+
+.list_area ul li {
+    padding-left: 10px;
+}
+
+.list_area ul li .edit.tiny_box,  .tiny_box{
+    width: 5%;
+    text-align: center;
+}
+
+.list_area ul li .edit.small_box, .small_box {
+    width: 10%;
+    text-align: left;
+}
+
+.list_area ul li .edit.medium_box, .medium_box {
+    width: 15%;
+    text-align: left;
+    word-wrap: break-word;
+    padding: 1px 2px;
+}
+
+.list_area ul li .edit.large_box, .large_box {
+    width: 20%;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.list_area ul li .edit.extra_large_box, .extra_large_box {
+    width: 25%;
+    text-align: left;
+}
+
+.list_area ul li .edit.mega_large_box, .mega_large_box {
+    width: 30%;
+    text-align: left;
+}
+
+.list_area .cbo p {
+    padding-left: 15px;
+    margin: 10px 0px 15px;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.edit i.fa, i.fa {
+    font-size: 18px;
+}
+
+.edit i.fa-edit, i.fa-edit {
+    color: #0d7495;
+}
+
+.edit i.fa-trash-o, i.fa-trash-o {
+    color: #B70518;
+    font-size: 18px;
+}
+
+.edit i.fa-plus-circle, i.fa-plus-circle {
+    color: #057200;
+}
+
+.edit i.fa-check-square, i.fa-check-square {
+    color: #057200;
+}
+
+.edit i.fa-close, i.fa-close {
+    color: #B70518;
+}
+
+.left_bar h2 {
+    font-size: 18px;
+    padding: 0px;
+    margin: 4px 0px 12px;
+}
+
+.left_nav_sec h4 {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    padding: 2px 0px 4px;
+    margin: 0px 0px 4px;
+    clear: both;
+    border-bottom: 1px solid #535a63;
+    line-height: 16px;
+}
+
+.left_nav_sec h4 .icon_before i {
+    font-size: 13px;
+}
+
+.left_nav_sec h4:hover {
+    color: #51a0b5;
+}
+
+.left_nav_sec h4.activeMe {
+    color: #51a0b5;
+}
+
+.left_nav_sec h4 a {
+    color: #fff;
+}
+
+.left_nav_sec h4 a:hover {
+    color: #51a0b5;
+}
+
+.left_nav_sec h4:selected {
+    color: #51a0b5;
+}
+
+.left_nav_sec h4 .icon_before {
+    margin-right: 10px;
+    display: inline-block;
+    float: left;
+}
+
+.left_nav_sec h4 .icon_after {
+    margin-left: 10px;
+    display: inline-block;
+    float: right;
+}
+
+.left_nav_sec h4 .icon_before i.fa {
+    color: #fff;
+}
+
+.left_nav_sec h4 .icon_after i.fa {
+    color: #fff;
+}
+
+.left_nav_sec h4 .icon_before span.selected,
+.left_nav_sec h4 .sub_content span.selected {
+    color: #51a0b5 !important;
+    font-weight: bold;
+}
+
+.sub_content {
+    margin-bottom: 4px;
+    clear: both;
+    overflow: hidden;
+    display: none;
+}
+
+.sub_content h4 {
+    padding-left: 15px;
+}
+
+.sub_content .sub_content h4 {
+    padding-left: 30px;
+}
+
+.sub_content.openMe {
+    display: block;
+}
+
+
+
+select {
+    background: #fff;
+    color: #3d444d;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 3px 8px;
+    border: 1px solid #3d444d;
+}
+
+label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: #3d444d;
+    font-weight: bold;
+}
+
+.form-container {
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+  }
+
+.dx-field-item-label {
+    max-width: 150px; /* Set the desired maximum width */
+    white-space: normal !important; /* Allow text to wrap */
+    overflow-wrap: break-word; /* Ensure text wraps within the boundary */
+    word-break: break-word; /* Force line breaks within words */
+    display: block; /* Ensure the label behaves as a block-level element */
+  }
+
+/* Ensure the parent container uses flexbox */
+.input-container {
+    display: flex;
+    align-items: center; /* Vertically aligns the label and input */
+    margin-bottom: 1rem; /* Adds spacing between input rows */
+  }
+  
+  /* Style the label */
+  .input-label {
+    flex: 0 0 150px; /* Fixed width to align labels */
+    text-align: right; /* Right-align the text */
+    margin-right: 10px; /* Spacing between label and input */
+    font-weight: bold;
+    font-size: 12px;
+    color: #333;
+  }
+  
+  /* Style the input field wrapper */
+  .input-field {
+    flex: 1; /* Allows the input to take up remaining space */
+  }
+  
+  /* Ensure inputs take up the full width of the input field */
+  .input-field .dx-textbox {
+    width: 100%;
+  }
+  
+ .pending-active {
+    color:green;
+    font-weight: 900;
+ }
+
+/*---------Login Page------*/
+
+.login_aree_col {
+    background: #D7E7EB;
+}
+
+.login_full_page {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: #D7E7EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.login_outer {
+    width: 310px;
+    margin: 0px auto;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+
+.login_outer .form_field {
+    margin-top: 20px;
+}
+
+.login_outer .form_field input[type="text"] {
+    width: 90%;
+    border-radius: 3px 3px 0px 0px;
+    line-height: 24px;
+    border-bottom: 0px;
+    margin: 0px;
+    height: 24px;
+}
+
+.login_outer .form_field input[type="password"] {
+    width: 90%;
+    border-radius: 0px 0px 3px 3px;
+    line-height: 24px;
+    border-bottom: 2px solid;
+    margin: 0px;
+    height: 24px;
+}
+
+.login_outer .form_field li.no_gap {
+    margin-bottom: 0px;
+}
+
+.login_outer .form_field li.gap_btm1 {
+    margin-bottom: 20px;
+}
+
+.login_outer #flashMessage {
+    margin: 25px 0px 0px;
+    color: #b70518;
+}
+
+.doctor_insurance ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.doctor_insurance .clonedInputIns {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.doctor_insurance .clonedInputIns .input {
+    width: 12%;
+    float: left;
+    margin-right: 1%;
+}
+
+.doctor_insurance .clonedInputIns .input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.doctor_insurance .clonedInputIns .input input[type="text"] {
+    width: 94% !important;
+    margin-top: -3px;
+}
+
+.doctor_insurance .clonedInputIns .input select {
+    width: 94%;
+}
+
+.bluetext {
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+
+.clonedInput .field {
+    position: relative;
+}
+
+.clonedOutput .field {
+    position: relative;
+}
+
+.clonedInput .bluetext {
+    top: 5px;
+    right: 90px;
+}
+
+.clonedOutput .bluetext {
+    top: 5px;
+    right: 90px;
+}
+
+#btnAddIns {
+    background: #3d444e;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#btnAddIns:hover {
+    background: #1d6174;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    color: #000;
+    font-weight: normal;
+}
+
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+    color: none;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    background: none;
+    border: 0px;
+}
+
+.list_area ul.marginBottom {
+    margin-bottom: 5px;
+}
+
+.example_area {
+    padding: 2px;
+    margin: 0 0 5px 0;
+    color: appworkspace;
+}
+
+
+/*---------Video Section----------*/
+
+.vc-player {
+    margin-bottom: 20px;
+}
+
+.rVideo {
+    background: #fff;
+}
+
+.videocontrols-right {
+    width: 66% !important;
+    float: right;
+}
+
+.videocontrols-weight-volume {
+    margin-top: 12px !important;
+}
+
+.videocontrols .videocontrols-play {
+    float: left !important;
+    margin-top: 6px !important;
+    margin-left: 2px !important;
+}
+
+.videocontrols .videocontrols-time {
+    float: left !important;
+}
+
+.videocontrols-weight-volume {
+    width: 39%!important;
+    margin: 0!important;
+    margin-top: 3px !important;
+}
+
+.videocontrols-right .videocontrols-button {
+    display: none !important;
+}
+
+.videocontrols-right .videocontrols-button.videocontrols-mute {
+    display: inline-block !important;
+}
+
+.videocontrols-totaltime {
+    display: none !important;
+}
+
+.videocontrols-right .videocontrols-button.videocontrols-fullscreen {
+    margin: 6px 6px 0 !important;
+    display: block !important;
+    float: right !important;
+}
+
+.videocontrols-right .videocontrols-button.videocontrols-mute {
+    display: inline-block !important;
+    float: left;
+    margin-top: 6px !important;
+}
+
+.videocontrols-weight-volume {
+    float: left !important;
+    max-width: 120px;
+}
+
+.vc-player.hover>.videocontrols>.videocontrols-seeker>.videocontrols-range {
+    margin-left: 0px !important;
+}
+
+
+/*---------End Video Section----------*/
+
+.missmatch {
+    font-size: 10px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+/*---------Start Left Menu Section----------*/
+  
+  /* Submenu Styling */
+.sub_content {
+    margin-left: 15px;
+    display: block; /* Ensure submenu is visible */
+    color: white; /* White text */
+    background-color: #3d444d; /* Match parent background */
+    height: 0; /* Start collapsed */
+    overflow: hidden; /* Hide overflowing content */
+    transition: height 0.6s ease;
+  }
+
+  .sub_content.expanded {
+    overflow: visible;
+  }
+  
+  /* Submenu Items */
+  .sub_content h4 {
+    margin: 5px 0;
+  }
+  
+  .sub_content a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .sub_content a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  
+  /* Icons */
+  .icon_before {
+    margin-right: 8px;
+  }
+  
+  .icon_after i {
+    font-size: 16px;
+  }
+
+  /* Apply the color to the parent section title */
+.left_nav_sec.selected > h4 {
+    color: #51a0b5;
+}
+
+/* Apply the color to the selected sub-content item */
+.left_nav_sec .sub_content h4 .selected {
+    color: #51a0b5;
+}
+
+/* Ensure hover effects do not override the selected color */
+.left_nav_sec.selected > h4:hover,
+.left_nav_sec .sub_content h4 .selected:hover {
+    color: #51a0b5;
+}
+
+  
+  
+  /*---------End Left Menu Section----------*/
+
+
+  .error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .error-close {
+    background: none;
+    border: none;
+    color: #721c24;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 5px;
+  }
+  
+  .error-close:hover {
+    color: #f5c6cb;
+  }
+  
+  .required_fields { padding-left:12px; color:#ff0000; font-weight: bold;
+    margin-bottom: 8px;   }
+
+
+    /* Style the Toolbar */
+.dx-htmleditor-toolbar-wrapper {
+    background-color: lightgray;
+  }
+  
+  /* Style the HtmlEditor content area */
+  .dx-htmleditor-content {
+    background-color: white;
+  }
+
+  /* Hide an input to use for validating data in an HtmlEditor */
+  .htmleditor-validator {
+    position: absolute !important;
+    left: -10000px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
